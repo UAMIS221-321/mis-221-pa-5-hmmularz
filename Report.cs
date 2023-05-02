@@ -5,42 +5,30 @@ namespace mis_221_pa_5_hmmularz
         static public void IndividualCustomerSessions(){
             Console.WriteLine("What is the customer's email you are looking for?");
            string userInput = Console.ReadLine(); 
-            //read in all the bookings, trainerutiltiy.getall bookings 
-            //for loop, only itereates through bookings.count to make sure goes through them
-            //if statement, only writes out when the booking email is = to email they inputted 
-// for and then an if, if user input = 
-//if, and completed status is true, because they are completed sessions 
-//cw 
-            for()
-
+           Bookings[] bookings = new Bookings[100];
+           StreamReader rdr = new StreamReader("bookings.txt"); 
+           string line = rdr.ReadLine();
+                for(int i = 0; i < bookings.Count(); i++ ){ //read through the booking array 
+                    if(userInput == bookings.GetcustomerEmail()){ //if the email is the same as the one the user entered 
+                        if(BookingUtility.Getstatus() == true){ //and if that status is true, meaning that the session has been completed 
+                            System.Console.WriteLine($"{Bookings[i]GetsessionId()}");// write out the session ID for the session
+                        }
+                        
+                    }
+                    i++;
+                }
 
         }
 
         static public void HistoricalCustomerSessions(){ 
-
-            //a list of all sessions sorted by customer then by date 
-            //for each customer provide total number of sessions
-
-            //read in all the bookings, bookingutility.getall
-            // sort by customer then by date 
-
-            //need to sort first, by name (customer_) then throw into control breakm if statement where you add one and go into process break, then sort by date. 
-
-            //don't forget to keep count after it breaks 
-
             
 
 
         }
 
         static public void HistoricalRevenueReport(){
-
-            //a list of revenue by month and year 
-            //combo of booked and listings 
-
-            //sort by month and year, and then a control break, adding to the revenue every time it matches. 
-
-            //remember when doing a sort you need the swap methods. Sorting by year year first, and then by month from those years.   
+          
+         
         }
     }
 }
